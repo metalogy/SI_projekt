@@ -1,10 +1,7 @@
 class Plant():
-    plant_name=''
-    plant_description='None'
+    plant_name = ''
+    plant_description = ''
 
-    def __init__(self,name):
-        self.name=name
-
-    def __init__(self, name,description):
+    def __init__(self, name, description):
         self.plant_name = name
-        self.plant_description=description
+        self.plant_description = description

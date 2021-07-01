@@ -1,8 +1,11 @@
 from plant import Plant
-#import menu
+# import menu
 
 from rules import *
-plants_container=[]
+
+plants_container = []
+
+
 class PlantSelection(KnowledgeEngine):
     @Rule(
         AND(
@@ -327,7 +330,7 @@ class PlantSelection(KnowledgeEngine):
         )
     )
     def plant_pear(self):
-        print('eszkere grucha hehe ') #debug
+        print('eszkere grucha hehe ')  # debug
         plant = Plant('European pear, Pyrus communis', 'Juicy.')
         global plants_container
         plants_container.append(plant)
@@ -372,7 +375,7 @@ class PlantSelection(KnowledgeEngine):
         )
     )
     def plant_stock(self):
-        #print('Cherry tree is ideal to plant')
+        # print('Cherry tree is ideal to plant')
         plant = Plant('Night-scented stock, Matthiola longipetala', 'Spreads the scent at eavnings.')
         global plants_container
         plants_container.append(plant)
@@ -417,7 +420,7 @@ class PlantSelection(KnowledgeEngine):
         )
     )
     def plant_horsetail(self):
-        print('co to robi xd') #debug
+        print('co to robi xd')  # debug
         plant = Plant('Horsetail, Spathiphyllum cochlearispathum', 'It cleans air.')
         global plants_container
         plants_container.append(plant)
@@ -462,7 +465,7 @@ class PlantSelection(KnowledgeEngine):
         )
     )
     def plant_evergreen(self):
-        #print('Cherry tree is ideal to plant')
+        # print('Cherry tree is ideal to plant')
         plant = Plant('Chinese Evergreen, Aglaonema', 'One of the most popular houseplants.')
         global plants_container
         plants_container.append(plant)
@@ -507,7 +510,7 @@ class PlantSelection(KnowledgeEngine):
         )
     )
     def plant_strawberry(self):
-        #print('Cherry tree is ideal to plant')
+        # print('Cherry tree is ideal to plant')
         plant = Plant('Garden strawberry, Fragaria × ananassa', 'Best known hybrid species.')
         global plants_container
         plants_container.append(plant)
@@ -555,7 +558,7 @@ class PlantSelection(KnowledgeEngine):
         )
     )
     def plant_rose(self):
-        #print('Cherry tree is ideal to plant')
+        # print('Cherry tree is ideal to plant')
         plant = Plant('Rose, Rosa L.', 'Caution, it stings!')
         global plants_container
         plants_container.append(plant)
@@ -647,12 +650,10 @@ class PlantSelection(KnowledgeEngine):
     )
     def plant_bleeding_heart(self):
         # print('Cherry tree is ideal to plant')
-        plant = Plant('Bleeding heart, Lamprocapnos spectabilis', 'It is valued for its heart-shaped pink and white flowers, borne in spring.')
+        plant = Plant('Bleeding heart, Lamprocapnos spectabilis',
+                      'It is valued for its heart-shaped pink and white flowers, borne in spring.')
         global plants_container
         plants_container.append(plant)
-
-
-
 
 # engine = PlantSelection()
 # engine.reset()

@@ -1,57 +1,65 @@
 from experta import *
 
-#Warunki uprawy
+
+# Warunki uprawy
 class SoilPH(Fact):
-    #INFO- zmienne
+    # INFO- zmienne
     # acidic
     # neutral
     # alkaline
-    #DNM - doesnt matter, użytkownikowi wszystko jedno
+    # DNM - doesnt matter, użytkownikowi wszystko jedno
     pass
 
+
 class Humidity(Fact):
-    #INFO- zmienne
+    # INFO- zmienne
     # wet
     # moderate
     # dry
-    #DNM - doesnt matter, użytkownikowi wszystko jedno
+    # DNM - doesnt matter, użytkownikowi wszystko jedno
     pass
 
+
 class Insolation(Fact):
-    #INFO- zmienne
+    # INFO- zmienne
     # sunny
     # moderate
     # dark
-    #DNM - doesnt matter, użytkownikowi wszystko jedno
+    # DNM - doesnt matter, użytkownikowi wszystko jedno
     pass
 
-#Preferencje użytkownika, warunki wizualne i użytkowe
+
+# Preferencje użytkownika, warunki wizualne i użytkowe
 class Size(Fact):
-    #INFO- zmienne
+    # INFO- zmienne
     # big
     # moderate
     # small
-    #DNM - doesnt matter, użytkownikowi wszystko jedno
+    # DNM - doesnt matter, użytkownikowi wszystko jedno
     pass
 
+
 class Function(Fact):
-    #INFO- zmienne
+    # INFO- zmienne
     # decorative
     # aromatic
     # edible
-    #DNM - doesnt matter, użytkownikowi wszystko jedno
+    # DNM - doesnt matter, użytkownikowi wszystko jedno
     pass
+
 
 class Alergic(Fact):
-    #INFO- zmienne
+    # INFO- zmienne
     # non_alergic
     # alergic
-    #DNM - doesnt matter, użytkownikowi wszystko jedno
+    # DNM - doesnt matter, użytkownikowi wszystko jedno
     pass
 
+
 class PrimaryColor(Fact):
-    #TODO-WYPEŁNIĆ KOLORY
+    # TODO-WYPEŁNIĆ KOLORY
     pass
+
 
 class SecondaryColor(Fact):
     # TODO-WYPEŁNIĆ KOLORY
