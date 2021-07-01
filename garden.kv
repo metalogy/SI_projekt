@@ -1,4 +1,10 @@
 <Menu>:
+    canvas.before:
+		Color:
+			rgba: (.21,.53,.27,1)
+		Rectangle:
+			pos: 0,0
+			size: 1600, 1200
     BoxLayout:
         orientation: "vertical"
         size: 600, 800
@@ -10,7 +16,7 @@
             font_size: 45
         Spinner:
             id: ph
-            text: ">select soil PH<"
+            text: ">select soil pH<"
             values: ["alkaline", "neutral", "acidic", "not important"] # lack of alkaline
             font_size: 20
             on_text: root.read_ph(ph.text)
@@ -28,7 +34,7 @@
             on_text: root.read_ins(ins.text)
         Spinner:
             id: size
-            text: ">select plan size<"
+            text: ">select plant size<"
             values: ["big", "medium", "small", "not important"] # lack of medium
             font_size: 20
             on_text: root.read_size(size.text)
