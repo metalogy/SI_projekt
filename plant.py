@@ -1,5 +1,4 @@
 class Plant():
-    #plants_container
     plant_name=''
     plant_description='None'
 

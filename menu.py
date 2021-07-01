@@ -61,12 +61,13 @@ class Menu(Screen):
 
         self.eng.run() #ZAWSZE ZWRACA NONE
         if plants_container is not None:
-            data=''
+            data='Ideal plants to plant in your garden will be:\n'
             for plant in plants_container:
-                data+='\n'+plant.plant_name+'\n'+plant.plant_description
+                data+='\n'+plant.plant_name+'\n'+plant.plant_description+'\n\n'
                 self.ids.res.text=data
+            print(data) #DEBUG
         else:
-            self.ids.res.text = "NO RESULT" #TODO jakosś ładnie wyświetlić
+            self.ids.res.text = "Unfortunately, there is no plant in our database,\n which satisfies your requirements."
         plants_container.clear()
 
 
