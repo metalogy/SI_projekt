@@ -1,0 +1,66 @@
+<Menu>:
+    BoxLayout:
+        orientation: "vertical"
+        size: 600, 800
+        padding: 30
+        spacing: 5
+
+        Label:
+            text: "XD GARDENS SOFTWARE XD"
+            font_size: 45
+        Spinner:
+            id: ph
+            text: ">select soil PH<"
+            values: ["alkaline", "neutral", "acidic", "not important"] # lack of alkaline
+            font_size: 20
+            on_text: root.read_ph(ph.text)
+        Spinner:
+            id: hum
+            text: ">select humidity<"
+            values: ["wet", "moderate", "dry", "not important"]
+            font_size: 20
+            on_text: root.read_hum(hum.text)
+        Spinner:
+            id: ins
+            text: ">select insolation<"
+            values: ["sunny", "mixed", "dark", "not important"]
+            font_size: 20
+            on_text: root.read_ins(ins.text)
+        Spinner:
+            id: size
+            text: ">select plan size<"
+            values: ["big", "medium", "small", "not important"] # lack of medium
+            font_size: 20
+            on_text: root.read_size(size.text)
+        Spinner:
+            id: fun
+            text: ">select plant function<"
+            values: ["decorative", "aromatic", "edible", "not important"]
+            font_size: 20
+            on_text: root.read_fun(fun.text)
+        Spinner:
+            id: alg
+            text: ">can cause an allergy<"
+            values: ["yes", "no", "not important"]
+            font_size: 20
+            on_text: root.read_alg(alg.text)
+        Spinner:
+            id: col
+            text: ">select primary color<"
+            values: ["green", "purple", "not important"]
+            font_size: 20
+            on_text: root.read_col(col.text)
+        Spinner:
+            id: col1
+            text: ">select secondary color<"
+            values: ["green", "white", "purple", "red", "not important"]
+            font_size: 20
+            on_text: root.read_col1(col1.text)
+        Button:
+            text: "PROPOSE PLANT"
+            font_size: 25
+            on_press: root.propose()
+        Label:
+            id: res
+            text: ""
+            font_size: 25
