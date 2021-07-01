@@ -1,4 +1,4 @@
-class Plant():
+class Plant:
     plant_name = ''
     plant_description = ''
 

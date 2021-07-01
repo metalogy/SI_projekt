@@ -1,66 +1,114 @@
 <Menu>:
     BoxLayout:
         orientation: "vertical"
-        size: 600, 800
-        padding: 30
-        spacing: 5
+        size: 8, 6
+        padding: 20
+        spacing: 30
 
         Label:
-            text: "XD GARDENS SOFTWARE XD"
-            font_size: 45
-        Spinner:
-            id: ph
-            text: ">select soil PH<"
-            values: ["alkaline", "neutral", "acidic", "not important"] # lack of alkaline
-            font_size: 20
-            on_text: root.read_ph(ph.text)
-        Spinner:
-            id: hum
-            text: ">select humidity<"
-            values: ["wet", "moderate", "dry", "not important"]
-            font_size: 20
-            on_text: root.read_hum(hum.text)
-        Spinner:
-            id: ins
-            text: ">select insolation<"
-            values: ["sunny", "mixed", "dark", "not important"]
-            font_size: 20
-            on_text: root.read_ins(ins.text)
-        Spinner:
-            id: size
-            text: ">select plan size<"
-            values: ["big", "medium", "small", "not important"] # lack of medium
-            font_size: 20
-            on_text: root.read_size(size.text)
-        Spinner:
-            id: fun
-            text: ">select plant function<"
-            values: ["decorative", "aromatic", "edible", "not important"]
-            font_size: 20
-            on_text: root.read_fun(fun.text)
-        Spinner:
-            id: alg
-            text: ">can cause an allergy<"
-            values: ["yes", "no", "not important"]
-            font_size: 20
-            on_text: root.read_alg(alg.text)
-        Spinner:
-            id: col
-            text: ">select primary color<"
-            values: ["green", "white", "purple", "red", "brown", "yellow", "pink", "not important"]
-            font_size: 20
-            on_text: root.read_col(col.text)
-        Spinner:
-            id: col1
-            text: ">select secondary color<"
-            values: ["green", "white", "purple", "red", "brown", "yellow", "pink", "not important"]
-            font_size: 20
-            on_text: root.read_col1(col1.text)
+            text: "GARDENS SOFTWARE"
+            font_size: 70
+        BoxLayout:
+            orientation: "horizontal"
+
+            Label:
+                text: "Soil PH"
+                font_size: 25
+            Spinner:
+                id: ph
+                text: ">select soil PH<"
+                values: ["alkaline", "neutral", "acidic", "not important"]
+                font_size: 20
+                on_text: root.read_ph(ph.text)
+        BoxLayout:
+            orientation: "horizontal"
+
+            Label:
+                text: "Humidity"
+                font_size: 25
+            Spinner:
+                id: hum
+                text: ">select humidity<"
+                values: ["wet", "moderate", "dry", "not important"]
+                font_size: 20
+                on_text: root.read_hum(hum.text)
+        BoxLayout:
+            orientation: "horizontal"
+            Label:
+                text: "Insolation"
+                font_size: 25
+            Spinner:
+                id: ins
+                text: ">select insolation<"
+                values: ["sunny", "mixed", "dark", "not important"]
+                font_size: 20
+                on_text: root.read_ins(ins.text)
+        BoxLayout:
+            orientation: "horizontal"
+            Label:
+                text: "Species size"
+                font_size: 25
+            Spinner:
+                id: size
+                text: ">select plant size<"
+                values: ["big", "medium", "small", "not important"]
+                font_size: 20
+                on_text: root.read_size(size.text)
+        BoxLayout:
+            orientation: "horizontal"
+            Label:
+                text: "Function"
+                font_size: 25
+            Spinner:
+                id: fun
+                text: ">select plant function<"
+                values: ["decorative", "aromatic", "edible", "not important"]
+                font_size: 20
+                on_text: root.read_fun(fun.text)
+        BoxLayout:
+            orientation: "horizontal"
+            Label:
+                text: "Allergy cause"
+                font_size: 25
+            Spinner:
+                id: alg
+                text: ">can cause an allergy<"
+                values: ["yes", "no", "not important"]
+                font_size: 20
+                on_text: root.read_alg(alg.text)
+        BoxLayout:
+            orientation: "horizontal"
+            Label:
+                text: "Primary color"
+                font_size: 25
+            Spinner:
+                id: col
+                text: ">select primary color<"
+                values: ["green", "white", "purple", "red", "brown", "yellow", "pink", "not important"]
+                font_size: 20
+                on_text: root.read_col(col.text)
+        BoxLayout:
+            orientation: "horizontal"
+            Label:
+                text: "Secondary color"
+                font_size: 25
+            Spinner:
+                id: col1
+                text: ">select secondary color<"
+                values: ["green", "white", "purple", "red", "brown", "yellow", "pink", "not important"]
+                font_size: 20
+                on_text: root.read_col1(col1.text)
         Button:
             text: "PROPOSE PLANT"
             font_size: 25
             on_press: root.propose()
-        Label:
-            id: res
-            text: ""
-            font_size: 25
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+
+            Label:
+                id: res
+                size_hint_y: None
+                height: 1000
+                text_size: self.width, None
+                text: ""

@@ -1,3 +1,4 @@
+from kivy import Config
 from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, Screen
 
@@ -58,10 +59,11 @@ class Menu(Screen):
         self.eng.declare(soil, hum, ins, size, fun, alg, pri, sec)
 
         self.eng.run()  # ZAWSZE ZWRACA NONE
-        if plants_container is not None:
+        # global plants_container
+        if len(plants_container) != 0:
             data = 'Ideal plants to plant in your garden will be:\n'
             for plant in plants_container:
-                data += '\n' + plant.plant_name + '\n' + plant.plant_description + '\n\n'
+                data += '\n' + plant.plant_name + '\n' + plant.plant_description + '\n'
                 self.ids.res.text = data
             print(data)  # DEBUG
         else:
@@ -70,6 +72,8 @@ class Menu(Screen):
 
 
 class GardenApp(App):
+    Config.set("graphics", "width", "800")
+    Config.set("graphics", "height", "900")
 
     def build(self):
         manager = ScreenManager()
